@@ -1,10 +1,9 @@
 # project_gulp
 gulp构建用于html压缩，less编译，js合并混淆的gulpfile.js
 
-/**
- * 压缩html文件，并复制到dist文件夹
- * 
- */
+
+ 压缩html文件，并复制到dist文件夹
+
 ```javascript
 gulp.task('html', function(){
 	return	gulp.src('src/*.html')
@@ -17,10 +16,9 @@ gulp.task('html', function(){
 })
 ```
 
-/**
- * 编译Less，并压缩CSS
- * 
- */
+
+ 编译Less，并压缩CSS 
+
 ```javascript
 gulp.task('style', function(){
   return gulp.src('src/style/*.less')
@@ -35,9 +33,8 @@ gulp.task('style', function(){
 })
 ```
 
-/**
- * Js的合并、压缩混淆
- */
+ Js的合并、压缩混淆
+
 ```javascript
 gulp.task('script', function(){
 	return gulp.src('src/script/*.js')
@@ -48,9 +45,9 @@ gulp.task('script', function(){
 })
 ```
 
-/**
- * IMG图片复制到dist文件夹
- */
+
+ IMG图片复制到dist文件夹
+
 ```javascript
 gulp.task('img', function(){
 	return gulp.src('src/img/*')
@@ -59,10 +56,10 @@ gulp.task('img', function(){
 })
 ```
 
-/**
- * 浏览器同步刷新
- * 
- */
+
+ 浏览器同步刷新
+ 
+
 ```javascript
 gulp.task('serve', ['html','style','script','img'], function(){
 	browserSync.init({
@@ -78,10 +75,9 @@ gulp.task('serve', ['html','style','script','img'], function(){
 
 `gulp.task('default',['serve']);`
 
-/**
- * 清理dist文件夹中内容
- * 
- */
+
+ 清理dist文件夹中内容
+
 ```javascript
 gulp.task('clean', function(){
 	return gulp.src('dist/*')
@@ -89,4 +85,4 @@ gulp.task('clean', function(){
 })
 ```
 
-##使用时，只需运行gulp clean，清空发布文件夹dist中的所有内容，然后运行gulp，根据src中内容自动生成dist中的内容。##
+## 使用时，只需运行gulp clean，清空发布文件夹dist中的所有内容，然后运行gulp，根据src中内容自动生成dist中的内容。##
